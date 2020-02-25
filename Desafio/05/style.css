@@ -120,6 +120,9 @@ form .btn-login {
 
 .form-hide {
     animation: down 500ms forwards;
+    /* animation-timing-function: cubic-bezier(0, 1.2, 0.6, 0.2); */
+    /* animation-timing-function: steps(2); */
+    animation-timing-function: cubic-bezier(0, 1.2, 0.6, 0.2);
 }
 
 @keyframes down {

@@ -120,6 +120,9 @@ form .btn-login {
 
 .form-hide {
     animation: down 500ms forwards;
+    /* animation-timing-function: cubic-bezier(0, 1.2, 0.6, 0.2); */
+    /* animation-timing-function: steps(2); */
+    animation-timing-function: cubic-bezier(0, 1.2, 0.6, 0.2);
 }
 
 @keyframes down {
@@ -128,5 +131,54 @@ form .btn-login {
     }
     to {
         transform: translateY(100vh);
+    }
+}
+
+
+/* FORM NO-NO */
+
+form.validate-error {
+    animation: nono 200ms linear, fade paused;
+    animation-iteration-count: 2;
+}
+
+@keyframes nono {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    35% {
+        transform: translateX(-15%);
+    }
+    70% {
+        transform: translateX(15%);
+    }
+}
+
+
+/* Squares */
+
+.squares li {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    animation: up 2s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-900px) rotate(960deg);
     }
 }
