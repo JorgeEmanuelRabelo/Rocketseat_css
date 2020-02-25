@@ -40,7 +40,7 @@ _form.addEventListener("animationend", event => {
 // Squares
 const _ulSquares = document.querySelector('ul.squares');
 
-for (let index = 0; index < 11; index++) {
+for (let index = 0; index < 21; index++) {
     const li = document.createElement('li');
 
     const random = (min, max) => Math.random() * ((min, max) + min);
